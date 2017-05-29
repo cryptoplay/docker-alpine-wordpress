@@ -30,7 +30,7 @@ How-to
 
 ### A simple example
 
-# Say you want to run a single site on a VPS with Docker
+##### Say you want to run a single site on a VPS with Docker
 
 ```bash
 
@@ -47,7 +47,7 @@ Group ID:
 chown -R 100:101 /data/sites/cryptoplay.com/htdocs
 ```
 
-# Say you want to run a multiple WP sites on a VPS with Docker
+##### Say you want to run a multiple WP sites on a VPS with Docker
 
 ```bash
 
