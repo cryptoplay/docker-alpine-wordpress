@@ -10,4 +10,4 @@ docker push cryptoplay/alpine-wordpress:4.7.5
 docker push cryptoplay/alpine-wordpress:latest
 docker logout
 
-#curl -X POST 'https://hooks.microbadger.com/images/cryptoplay/alpine-wordpress/HTlsERf3kLY4CZ-tMPP1Hywe2Ns='
+curl -X POST 'https://hooks.microbadger.com/images/cryptoplay/alpine-wordpress/uwPTYMegv8MxPqs1S9e_DzwaxoM='

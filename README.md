@@ -11,7 +11,7 @@ Docker image:       https://registry.hub.docker.com/u/cryptoplay/alpine-wordpres
 [![Version](https://images.microbadger.com/badges/version/cryptoplay/alpine-wordpress.svg)](http://microbadger.com/images/cryptoplay/alpine-wordpress "View on microbadger.com")
 [![Source code](https://images.microbadger.com/badges/commit/cryptoplay/alpine-wordpress.svg)](http://microbadger.com/images/cryptoplay/alpine-wordpress "View on microbadger.com")
 [![Docker Registry](https://img.shields.io/docker/pulls/cryptoplay/alpine-wordpress.svg)](https://registry.hub.docker.com/u/cryptoplay/alpine-wordpress)&nbsp;
-[![Circle CI](https://circleci.com/gh/cryptoplay/docker-alpine-wordpress.png?circle-token=35697edcc84351ed5a53038ca8f9b1f2deaa7a2f)](https://circleci.com/gh/cryptoplay/docker-alpine-wordpress/tree/master 'View CI builds')
+[![Circle CI](https://circleci.com/gh/cryptoplay/docker-alpine-wordpress.png?circle-token=e197159ace2c041b79c52be12fc194a1a190d0f0)](https://circleci.com/gh/cryptoplay/docker-alpine-wordpress/tree/master 'View CI builds')
 
 [![Throughput Graph](https://graphs.waffle.io/cryptoplay/docker-alpine-wordpress/throughput.svg)](https://waffle.io/cryptoplay/docker-alpine-wordpress/metrics)
 
