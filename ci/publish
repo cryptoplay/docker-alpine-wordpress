@@ -1,0 +1,13 @@
+#!/bin/bash
+
+. ci/vars
+docker login -u ${user} -p ${pass}
+#docker login -u $DOCKER_USER -p $DOCKER_PASS
+docker tag cryptoplay/alpine-wordpress-wordpress cryptoplay/alpine-wordpress:${TAG}
+docker tag cryptoplay/alpine-wordpress cryptoplay/alpine-wordpress:4.7.5
+docker push cryptoplay/alpine-wordpress:${TAG}
+docker push cryptoplay/alpine-wordpress:4.7.5
+docker push cryptoplay/alpine-wordpress:latest
+docker logout
+
+#curl -X POST 'https://hooks.microbadger.com/images/cryptoplay/alpine-wordpress/HTlsERf3kLY4CZ-tMPP1Hywe2Ns='
