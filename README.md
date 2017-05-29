@@ -51,10 +51,10 @@ chown -R 100:101 /data/sites/cryptoplay.com/htdocs
 
 ```bash
 
-sudo docker run -p 80:80 cryptoplay/nginx-proxy
-mkdir -p /data/sites/cryptoplay.com/htdocs
+sudo docker run -p 80:80 --name nginx-proxy -d cryptoplay/alpine-nginx-proxy -v /var/run/docker.sock:/tmp/docker.sock:ro
+mkdir -p /data/sites/cryptoplay.tk/htdocs
 
-sudo docker run -e VIRTUAL_HOST=cryptoplay.com,www.cryptoplay.com -v /data/sites/cryptoplay.com:/DATA cryptoplay/alpine-wordpress
+sudo docker run -e VIRTUAL_HOST=cryptoplay.tk,www.cryptoplay.tk -v /data/sites/cryptoplay.tk:/DATA cryptoplay/alpine-wordpress
 
 mkdir -p /data/sites/cryptoplay.net/htdocs
 sudo docker run -e VIRTUAL_HOST=cryptoplay.net,www.cryptoplay.net -v /data/sites/cryptoplay.net:/DATA cryptoplay/alpine-wordpress
