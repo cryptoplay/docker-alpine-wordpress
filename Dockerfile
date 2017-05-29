@@ -15,7 +15,7 @@ LABEL   io.github.cryptoplay.build-date=$BUILD_DATE \
         io.github.cryptoplay.vcs-type="Git" \
         io.github.cryptoplay.vcs-url="https://github.com/cryptoplay/docker-alpine-wordpress.git" \
         io.github.cryptoplay.vendor="cryptoplay" \
-        io.github.cryptoplay.version=$VERSION
+        io.github.cryptoplay.version=$VERSION \
         io.github.cryptoplay.type="site" \
         io.github.cryptoplay.cms="wordpress" \
         io.github.cryptoplay.framework="wordpress" \
@@ -27,7 +27,7 @@ LABEL   io.github.cryptoplay.build-date=$BUILD_DATE \
         io.github.cryptoplay.params="docker run -d --name {container_name} -e VIRTUAL_HOST={virtual_hosts} -v /data/sites/{domain_name}:/DATA cryptoplay/alpine-wordpress"
 
 
-RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories\
+RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories \
     && apk update \
     && apk add --no-cache \
     bash \
