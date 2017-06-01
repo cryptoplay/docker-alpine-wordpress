@@ -1,4 +1,4 @@
-FROM cryptoplay/alpine:3.6
+FROM alpine:edge
 MAINTAINER CryptoPlay <docker@cryptoplay.tk>
 
 ARG BUILD_DATE
@@ -27,9 +27,9 @@ LABEL   io.github.cryptoplay.build-date=$BUILD_DATE \
         io.github.cryptoplay.params="docker run -d --name {container_name} -e VIRTUAL_HOST={virtual_hosts} -v /data/sites/{domain_name}:/DATA cryptoplay/alpine-wordpress"
 
 
-RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories \
-    && apk update \
-    && apk add --no-cache \
+#RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories \
+#    && apk update \
+RUN apk add --no-cache \
     bash \
     less \
     vim \
@@ -87,7 +87,7 @@ ADD src/php-fpm.conf /etc/php7/
 ADD src/run.sh /
 RUN chmod +x /run.sh
 
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/bin/wp-cli && chown nginx:nginx /usr/bin/wp-cli
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/bin/wp && chown nginx:nginx /usr/bin/wp
 
 EXPOSE 80
 EXPOSE 443
