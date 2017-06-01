@@ -59,6 +59,10 @@ RUN apk add --no-cache \
     php7-xmlreader \
     php7-soap \
     php7-redis \
+    php7-bz2 \
+    php7-memcached \
+    php7-zip \
+    php7-sqlite3 \
     mysql-client \
     openssh-client \
     git \
