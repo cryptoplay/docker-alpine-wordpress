@@ -58,6 +58,7 @@ RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositor
     php7-mbstring \
     php7-dom \
     php7-xmlreader \
+    php7-soap \
     mysql-client \
     openssh-client \
     git \
