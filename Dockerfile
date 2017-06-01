@@ -32,7 +32,6 @@ LABEL   io.github.cryptoplay.build-date=$BUILD_DATE \
 RUN apk add --no-cache \
     bash \
     less \
-    vim \
     nano \
     nginx \
     ca-certificates \
@@ -59,12 +58,14 @@ RUN apk add --no-cache \
     php7-dom \
     php7-xmlreader \
     php7-soap \
+    php7-redis \
     mysql-client \
     openssh-client \
     git \
     curl \
     rsync \
     musl \
+    gzip \
     && apk --update --no-cache add tar
 RUN rm -rf /var/cache/apk/*
 
