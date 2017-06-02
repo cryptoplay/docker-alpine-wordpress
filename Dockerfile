@@ -90,7 +90,8 @@ RUN sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini && \
 ADD src/nginx.conf /etc/nginx/
 ADD src/php-fpm.conf /etc/php7/
 ADD src/run.sh /
-RUN chmod +x /run.sh
+ADD files/wp-config-cryptoplay.php /usr/bin/wp-config-cryptoplay
+RUN chmod +x /run.sh && chmod +x /usr/bin/wp-config-cryptoplay
 
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/bin/wp && chown nginx:nginx /usr/bin/wp
 
